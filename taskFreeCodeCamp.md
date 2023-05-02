@@ -304,3 +304,90 @@ const myArray = ["myArray", 60, 70];
 const myData = myArray[0]
 
 ```
+
+# [41.Modify Array Data With Indexes](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/modify-array-data-with-indexes)
+
+```js
+const myArray = [18, 64, 99];
+myArray[0] = 45
+```
+# [42.Access Multi-Dimensional Arrays With Indexes](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/access-multi-dimensional-arrays-with-indexes)
+
+```js
+const myArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14],
+];
+const myData = myArray[2][1];
+```
+
+# [43.Manipulate Arrays With push Method](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-push)
+
+```js
+//push method used to push new item in the end of the arr
+const myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3])
+```
+
+# [44.Manipulate Arrays With pop Method](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-pop)
+
+```js
+//pop method used to remove the last item in the end of the arr
+const myArray = [["John", 23], ["cat", 2]];
+const removedFromMyArray = myArray.pop()
+```
+# [45.Manipulate Arrays With shift Method](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-shift)
+
+```js
+//shift method used to remove the first item in the arr
+const myArray = [["John", 23], ["dog", 3]];
+const removedFromMyArray = myArray.shift()
+```
+
+# [46.Manipulate Arrays With unshift Method](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-unshift)
+
+```js
+//unshift method used to add the first item in the arr
+const myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+myArray.unshift(["Paul", 35])
+```
+# [47.Shopping List](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/shopping-list)
+
+```js
+let myList = [
+  ["Apples", 5],
+  ["Bananas", 10],
+  ["Milk", 2],
+  ["Bread", 1],
+  ["Eggs", 12]
+];
+```
+
+# [48.Write Reusable JavaScript with Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/write-reusable-javascript-with-functions)
+
+```js
+ function reusableFunction(){
+   console.log("Hi World")
+ }
+ reusableFunction()
+```
+# [49.Passing Values to Functions with Arguments](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/passing-values-to-functions-with-arguments)
+
+```js
+function functionWithArgs(num1,num2){
+console.log(num1 + num2)
+}
+functionWithArgs(12,12) 
+```
+
+# [50.Return a Value from a Function with Return](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/return-a-value-from-a-function-with-return)
+
+```js
+function timesFive(a){
+  return a * 5
+}
+timesFive(2)
+```
