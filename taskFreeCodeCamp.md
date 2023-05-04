@@ -391,3 +391,123 @@ function timesFive(a){
 }
 timesFive(2)
 ```
+# [51.Global Scope and Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/global-scope-and-functions)
+
+```js
+const myGlobal = 10
+function fun1() {
+oopsGlobal = 5;
+}
+function fun2() {
+  let output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+```
+# [52.Local Scope and Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/local-scope-and-functions)
+
+```js
+function myLocalScope() {
+  const myVar = "Hello world!"
+  console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+console.log('outside myLocalScope', myVar);
+```
+# [53.Global vs. Local Scope in Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/global-vs--local-scope-in-functions)
+
+```js
+const outerWear = "T-Shirt";
+function myOutfit() {
+  const outerWear = "sweater"
+  return outerWear;
+}
+myOutfit();
+```
+
+# [54.Understanding Undefined Value returned from a Function](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/understanding-undefined-value-returned-from-a-function)
+
+```js
+let sum = 0;
+function addThree() {
+  sum = sum + 3;
+}
+function addFive(){
+  sum+=5
+}
+addThree();
+addFive();
+```
+
+# [55.Assignment with a Returned Value](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/assignment-with-a-returned-value)
+
+```js
+function processArg(num) {
+  return (num + 3) / 5;
+}
+const processed = processArg(7)
+```
+
+# [56.Stand in Line](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/stand-in-line)
+
+```js
+  function nextInLine(arr, item) {
+  arr.push(item);
+  const removingArr = arr.shift();
+  return removingArr;
+}
+let testArr = [1, 2, 3, 4, 5];
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+```
+# [57.Understanding Boolean Values](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/understanding-boolean-values)
+
+```js
+function welcomeToBooleans() {
+  return true; 
+}
+```
+# [58.Use Conditional Logic with If Statements](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-conditional-logic-with-if-statements)
+
+```js
+function trueOrFalse(wasThatTrue) {
+if(wasThatTrue){
+  return "Yes, that was true"
+}
+else{
+  return "No, that was false"
+}
+}
+trueOrFalse(true)
+trueOrFalse(false)
+```
+# [59.Comparison with the Equality Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-equality-operator)
+
+```js
+function testEqual(val) {
+  if (val == 12) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testEqual(10);
+```
+# [60.Comparison with the Strict Equality Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-strict-equality-operator)
+
+```js
+function testStrict(val) {
+  if (val === 7) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testStrict(10);
+```
