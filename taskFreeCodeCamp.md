@@ -879,3 +879,283 @@ function abTest(a, b) {
 }
 abTest(2, 2);
 ```
+# [81.Counting Cards](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/counting-cards)
+
+```js
+ let count = 0;
+function cc(card) {
+ switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      count--;
+      break;
+    default:
+  }
+  return count > 0 ? count + ' Bet' : count + ' Hold';
+}
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+```
+# [82.Build JavaScript Objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/build-javascript-objects)
+
+```js
+const myDog = {
+name:"dog",
+legs: 4,
+tails: 1,
+friends:[1,2,3]
+};
+```
+
+# [83.Accessing Object Properties with Dot Notation](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-dot-notation)
+
+```js
+const testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+const hatValue = testObj.hat;
+const shirtValue = testObj.shirt;
+```
+# [84.Accessing Object Properties with Bracket Notation](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-bracket-notation)
+
+```js
+const testObj = {
+  "anEntree": "hamburger",
+  "my side": "veggies",
+  "theDrink": "water"
+};
+const entreeValue = testObj[ "anEntree"]; 
+const drinkValue = testObj["theDrink"]
+
+```
+# [85.Accessing Object Properties with Variables](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-variables)
+```js
+const testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+const playerNumber = 16;  
+const player = testObj[playerNumber];
+```
+# [86.Updating Object Properties](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/updating-object-properties)
+```js
+const myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog["name"] = "Happy Coder"
+```
+# [87.Add New Properties to a JavaScript Object](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/add-new-properties-to-a-javascript-object)
+```js
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.bark = "woof"
+```
+# [88.Delete Properties from a JavaScript Object](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/delete-properties-from-a-javascript-object)
+```js
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+delete myDog.tails
+```
+# [89.Using Objects for Lookups](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/using-objects-for-lookups)
+```js
+function phoneticLookup(val) {
+  let result = "";
+  const lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+  result = lookup[val];
+  return result;
+}
+phoneticLookup("charlie");
+```
+# [90.Testing Objects for Properties](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/testing-objects-for-properties)
+```js
+function checkObj(obj, checkProp) {
+ if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not Found";
+  }
+}
+```
+# [91.Manipulating Complex Objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulating-complex-objects)
+```js
+const myMusic = [
+  {
+    artist: "The Beatles",
+    title: "Abbey Road",
+    release_year: 1969,
+    formats: ["CD", "Vinyl"]
+  },
+  {
+    artist: "Pink Floyd",
+    title: "The Wall",
+    release_year: 1979,
+    formats: ["CD", "Vinyl", "Digital"]
+  }
+];
+myMusic.push({
+  artist: "Led Zeppelin",
+  title: "IV",
+  release_year: 1971,
+  formats: ["CD", "Vinyl", "Cassette"]
+});
+
+```
+# [92.Accessing Nested Objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-nested-objects)
+```js
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+const gloveBoxContents = myStorage.car.inside["glove box"];
+```
+# [93.Accessing Nested Arrays](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-nested-arrays)
+```js
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+const secondTree = myPlants[1].list[1];
+```
+# [94.Record Collection](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/record-collection)
+```js
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  if (value === "") {
+    delete records[id][prop];
+  } else if (prop !== "tracks") {
+    records[id][prop] = value;
+  } else {
+    if (!records[id].hasOwnProperty("tracks")) {
+      records[id].tracks = [];
+    }
+    records[id].tracks.push(value);
+  }
+  return records;
+}
+
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+```
+# [95.Iterate with JavaScript While Loops](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-while-loops)
+```js
+const myArray = [];
+let i = 5
+while(i >= 0){
+  myArray.push(i)
+  i--
+}
+```
+# [96.Iterate with JavaScript For Loops](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-for-loops)
+```js
+const myArray = [];
+
+for (let i = 1; i < 6; i++) {
+  myArray.push(i);
+}
+```
+# [97.Iterate Odd Numbers With a For Loop](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-odd-numbers-with-a-for-loop)
+```js
+const myArray = [];
+for (let i = 1; i < 10; i += 2) {
+  myArray.push(i);
+}
+```
+# [98.Count Backwards With a For Loop](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/count-backwards-with-a-for-loop)
+```js
+const myArray = [];
+for (let i = 9; i >0; i -= 2) {
+  myArray.push(i);
+}
+```
+# [99.Iterate Through an Array with a For Loop](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-through-an-array-with-a-for-loop)
+```js
+const myArr = [2, 3, 4, 5, 6];
+let total = 0
+for (let i = 0; i < myArr.length; i++) {
+   total+=(myArr[i]);
+}
+```
+# [100.Nesting For Loops](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/nesting-for-loops)
+```js
+function multiplyAll(arr) {
+  let product = 1;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+  }
+  return product;
+}
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+```
