@@ -1159,3 +1159,21 @@ function multiplyAll(arr) {
 }
 multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 ```
+# [101.Iterate with JavaScript Do...While Loops](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-do---while-loops)
+```js
+const myArray = [];
+let i = 10;
+do {
+  myArray.push(i);
+  i++;
+}while (i < 5)
+```
+# [102.Iterate with JavaScript Do...While Loops](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-do---while-loops)
+```js
+const myArray = [];
+let i = 10;
+do {
+  myArray.push(i);
+  i++;
+}while (i < 5)
+```
