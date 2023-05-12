@@ -706,6 +706,7 @@ function testElseIf(val) {
 }
 testElseIf(7);
 ```
+
 # [72.Logical Order in If Else Statements](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/logical-order-in-if-else-statements)
 
 ```js
@@ -726,32 +727,36 @@ orderMyLogic(5);
 ```js
 function testSize(num) {
   if (num < 5) {
-    return "Tiny"
-  }
-  else if (num < 10) {
-    return "Small"
-  }
-  else if (num < 15) {
-    return "Medium"
-  }
-  else if(num < 20){
-    return "Large"
-  }
-   else if (num >= 20) {
-    return "Huge"
-  }
-  else {
+    return "Tiny";
+  } else if (num < 10) {
+    return "Small";
+  } else if (num < 15) {
+    return "Medium";
+  } else if (num < 20) {
+    return "Large";
+  } else if (num >= 20) {
+    return "Huge";
+  } else {
     return "Change Me";
   }
 }
 testSize(7);
 ```
+
 # [74.Golf Code](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/logical-order-in-if-else-statements)
 
 ```js
-const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+const names = [
+  "Hole-in-one!",
+  "Eagle",
+  "Birdie",
+  "Par",
+  "Bogey",
+  "Double Bogey",
+  "Go Home!",
+];
 function golfScore(par, strokes) {
- if (strokes === 1) {
+  if (strokes === 1) {
     return names[0];
   } else if (strokes <= par - 2) {
     return names[1];
@@ -769,122 +774,128 @@ function golfScore(par, strokes) {
 }
 golfScore(5, 4);
 ```
+
 # [75.Selecting from Many Options with Switch Statements](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/selecting-from-many-options-with-switch-statements)
 
 ```js
 function caseInSwitch(val) {
-switch(val){
-  case 1:
-  return "alpha"
-  break;
-  case 2:
-  return "beta"
-  break;
-  case 3:
-  return "gamma"
-  break;
-  default:
-  return "delta"
-}
+  switch (val) {
+    case 1:
+      return "alpha";
+      break;
+    case 2:
+      return "beta";
+      break;
+    case 3:
+      return "gamma";
+      break;
+    default:
+      return "delta";
+  }
 }
 caseInSwitch(1);
 ```
+
 # [76.Adding a Default Option in Switch Statements](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/adding-a-default-option-in-switch-statements)
 
 ```js
 function switchOfStuff(val) {
-  switch(val){
+  switch (val) {
     case "a":
-    return "apple"
-    break;
+      return "apple";
+      break;
     case "b":
-    return "bird"
-    break;
+      return "bird";
+      break;
     case "c":
-    return "cat"
-    break;
+      return "cat";
+      break;
     default:
-    return "stuff"    
+      return "stuff";
   }
 }
 switchOfStuff(1);
 ```
+
 # [77.Multiple Identical Options in Switch Statements](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/multiple-identical-options-in-switch-statements)
 
 ```js
 function sequentialSizes(val) {
-  switch(val){
+  switch (val) {
     case 1:
     case 2:
     case 3:
-    return "Low"
-    break;
+      return "Low";
+      break;
     case 4:
     case 5:
     case 6:
-    return "Mid"
-    break;
+      return "Mid";
+      break;
     case 7:
     case 8:
     case 9:
-    return "High"
+      return "High";
   }
 }
 sequentialSizes(1);
 ```
+
 # [78.Replacing If Else Chains with Switch](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/replacing-if-else-chains-with-switch)
 
 ```js
 function chainToSwitch(val) {
-switch(val){
-case "bob":
-return "Marley"
-break;
-case 42:
-return "The Answer"
-break;
-case 1:
-return "There is no #1"
-break;
-case 99:
-return "Missed me by this much!"
-break;
-case 7:
-return "Ate Nine"
-break;
-default:
-return ""
-}
+  switch (val) {
+    case "bob":
+      return "Marley";
+      break;
+    case 42:
+      return "The Answer";
+      break;
+    case 1:
+      return "There is no #1";
+      break;
+    case 99:
+      return "Missed me by this much!";
+      break;
+    case 7:
+      return "Ate Nine";
+      break;
+    default:
+      return "";
+  }
 }
 chainToSwitch(7);
 ```
+
 # [79.Returning Boolean Values from Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/returning-boolean-values-from-functions)
 
 ```js
 function isLess(a, b) {
-  return a < b
+  return a < b;
 }
 isLess(10, 15);
 ```
+
 # [80.Return Early Pattern for Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/return-early-pattern-for-functions)
 
 ```js
 function abTest(a, b) {
   if (a < 0 || b < 0) {
     return undefined;
-  }
-  else {
+  } else {
     return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
   }
 }
 abTest(2, 2);
 ```
+
 # [81.Counting Cards](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/counting-cards)
 
 ```js
- let count = 0;
+let count = 0;
 function cc(card) {
- switch (card) {
+  switch (card) {
     case 2:
     case 3:
     case 4:
@@ -893,26 +904,31 @@ function cc(card) {
       count++;
       break;
     case 10:
-    case 'J':
-    case 'Q':
-    case 'K':
-    case 'A':
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
       count--;
       break;
     default:
   }
-  return count > 0 ? count + ' Bet' : count + ' Hold';
+  return count > 0 ? count + " Bet" : count + " Hold";
 }
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+cc(2);
+cc(3);
+cc(7);
+cc("K");
+cc("A");
 ```
+
 # [82.Build JavaScript Objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/build-javascript-objects)
 
 ```js
 const myDog = {
-name:"dog",
-legs: 4,
-tails: 1,
-friends:[1,2,3]
+  name: "dog",
+  legs: 4,
+  tails: 1,
+  friends: [1, 2, 3],
 };
 ```
 
@@ -920,174 +936,185 @@ friends:[1,2,3]
 
 ```js
 const testObj = {
-  "hat": "ballcap",
-  "shirt": "jersey",
-  "shoes": "cleats"
+  hat: "ballcap",
+  shirt: "jersey",
+  shoes: "cleats",
 };
 const hatValue = testObj.hat;
 const shirtValue = testObj.shirt;
 ```
+
 # [84.Accessing Object Properties with Bracket Notation](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-bracket-notation)
 
 ```js
 const testObj = {
-  "anEntree": "hamburger",
+  anEntree: "hamburger",
   "my side": "veggies",
-  "theDrink": "water"
+  theDrink: "water",
 };
-const entreeValue = testObj[ "anEntree"]; 
-const drinkValue = testObj["theDrink"]
-
+const entreeValue = testObj["anEntree"];
+const drinkValue = testObj["theDrink"];
 ```
+
 # [85.Accessing Object Properties with Variables](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-variables)
+
 ```js
 const testObj = {
   12: "Namath",
   16: "Montana",
-  19: "Unitas"
+  19: "Unitas",
 };
-const playerNumber = 16;  
+const playerNumber = 16;
 const player = testObj[playerNumber];
 ```
+
 # [86.Updating Object Properties](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/updating-object-properties)
+
 ```js
 const myDog = {
-  "name": "Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
+  name: "Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
 };
-myDog["name"] = "Happy Coder"
+myDog["name"] = "Happy Coder";
 ```
+
 # [87.Add New Properties to a JavaScript Object](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/add-new-properties-to-a-javascript-object)
+
 ```js
 const myDog = {
-  "name": "Happy Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
+  name: "Happy Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
 };
-myDog.bark = "woof"
+myDog.bark = "woof";
 ```
+
 # [88.Delete Properties from a JavaScript Object](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/delete-properties-from-a-javascript-object)
+
 ```js
 const myDog = {
-  "name": "Happy Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"],
-  "bark": "woof"
+  name: "Happy Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
+  bark: "woof",
 };
-delete myDog.tails
+delete myDog.tails;
 ```
+
 # [89.Using Objects for Lookups](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/using-objects-for-lookups)
+
 ```js
 function phoneticLookup(val) {
   let result = "";
   const lookup = {
-    "alpha": "Adams",
-    "bravo": "Boston",
-    "charlie": "Chicago",
-    "delta": "Denver",
-    "echo": "Easy",
-    "foxtrot": "Frank"
+    alpha: "Adams",
+    bravo: "Boston",
+    charlie: "Chicago",
+    delta: "Denver",
+    echo: "Easy",
+    foxtrot: "Frank",
   };
   result = lookup[val];
   return result;
 }
 phoneticLookup("charlie");
 ```
+
 # [90.Testing Objects for Properties](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/testing-objects-for-properties)
+
 ```js
 function checkObj(obj, checkProp) {
- if (obj.hasOwnProperty(checkProp)) {
+  if (obj.hasOwnProperty(checkProp)) {
     return obj[checkProp];
   } else {
     return "Not Found";
   }
 }
 ```
+
 # [91.Manipulating Complex Objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulating-complex-objects)
+
 ```js
 const myMusic = [
   {
     artist: "The Beatles",
     title: "Abbey Road",
     release_year: 1969,
-    formats: ["CD", "Vinyl"]
+    formats: ["CD", "Vinyl"],
   },
   {
     artist: "Pink Floyd",
     title: "The Wall",
     release_year: 1979,
-    formats: ["CD", "Vinyl", "Digital"]
-  }
+    formats: ["CD", "Vinyl", "Digital"],
+  },
 ];
 myMusic.push({
   artist: "Led Zeppelin",
   title: "IV",
   release_year: 1971,
-  formats: ["CD", "Vinyl", "Cassette"]
+  formats: ["CD", "Vinyl", "Cassette"],
 });
-
 ```
+
 # [92.Accessing Nested Objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-nested-objects)
+
 ```js
 const myStorage = {
-  "car": {
-    "inside": {
+  car: {
+    inside: {
       "glove box": "maps",
-      "passenger seat": "crumbs"
-     },
-    "outside": {
-      "trunk": "jack"
-    }
-  }
+      "passenger seat": "crumbs",
+    },
+    outside: {
+      trunk: "jack",
+    },
+  },
 };
 const gloveBoxContents = myStorage.car.inside["glove box"];
 ```
+
 # [93.Accessing Nested Arrays](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-nested-arrays)
+
 ```js
 const myPlants = [
   {
     type: "flowers",
-    list: [
-      "rose",
-      "tulip",
-      "dandelion"
-    ]
+    list: ["rose", "tulip", "dandelion"],
   },
   {
     type: "trees",
-    list: [
-      "fir",
-      "pine",
-      "birch"
-    ]
-  }
+    list: ["fir", "pine", "birch"],
+  },
 ];
 const secondTree = myPlants[1].list[1];
 ```
+
 # [94.Record Collection](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/record-collection)
+
 ```js
 const recordCollection = {
   2548: {
-    albumTitle: 'Slippery When Wet',
-    artist: 'Bon Jovi',
-    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+    albumTitle: "Slippery When Wet",
+    artist: "Bon Jovi",
+    tracks: ["Let It Rock", "You Give Love a Bad Name"],
   },
   2468: {
-    albumTitle: '1999',
-    artist: 'Prince',
-    tracks: ['1999', 'Little Red Corvette']
+    albumTitle: "1999",
+    artist: "Prince",
+    tracks: ["1999", "Little Red Corvette"],
   },
   1245: {
-    artist: 'Robert Palmer',
-    tracks: []
+    artist: "Robert Palmer",
+    tracks: [],
   },
   5439: {
-    albumTitle: 'ABBA Gold'
-  }
+    albumTitle: "ABBA Gold",
+  },
 };
 
 // Only change code below this line
@@ -1105,18 +1132,22 @@ function updateRecords(records, id, prop, value) {
   return records;
 }
 
-updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+updateRecords(recordCollection, 5439, "artist", "ABBA");
 ```
+
 # [95.Iterate with JavaScript While Loops](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-while-loops)
+
 ```js
 const myArray = [];
-let i = 5
-while(i >= 0){
-  myArray.push(i)
-  i--
+let i = 5;
+while (i >= 0) {
+  myArray.push(i);
+  i--;
 }
 ```
+
 # [96.Iterate with JavaScript For Loops](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-for-loops)
+
 ```js
 const myArray = [];
 
@@ -1124,29 +1155,37 @@ for (let i = 1; i < 6; i++) {
   myArray.push(i);
 }
 ```
+
 # [97.Iterate Odd Numbers With a For Loop](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-odd-numbers-with-a-for-loop)
+
 ```js
 const myArray = [];
 for (let i = 1; i < 10; i += 2) {
   myArray.push(i);
 }
 ```
+
 # [98.Count Backwards With a For Loop](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/count-backwards-with-a-for-loop)
+
 ```js
 const myArray = [];
-for (let i = 9; i >0; i -= 2) {
+for (let i = 9; i > 0; i -= 2) {
   myArray.push(i);
 }
 ```
+
 # [99.Iterate Through an Array with a For Loop](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-through-an-array-with-a-for-loop)
+
 ```js
 const myArr = [2, 3, 4, 5, 6];
-let total = 0
+let total = 0;
 for (let i = 0; i < myArr.length; i++) {
-   total+=(myArr[i]);
+  total += myArr[i];
 }
 ```
+
 # [100.Nesting For Loops](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/nesting-for-loops)
+
 ```js
 function multiplyAll(arr) {
   let product = 1;
@@ -1157,23 +1196,216 @@ function multiplyAll(arr) {
   }
   return product;
 }
-multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+multiplyAll([
+  [1, 2],
+  [3, 4],
+  [5, 6, 7],
+]);
 ```
+
 # [101.Iterate with JavaScript Do...While Loops](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-do---while-loops)
+
 ```js
 const myArray = [];
 let i = 10;
 do {
   myArray.push(i);
   i++;
-}while (i < 5)
+} while (i < 5);
 ```
+
 # [102.Iterate with JavaScript Do...While Loops](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-do---while-loops)
+
 ```js
-const myArray = [];
-let i = 10;
-do {
-  myArray.push(i);
-  i++;
-}while (i < 5)
+function sum(arr, n) {
+  if (n === 0) {
+    return 0;
+  }
+  return sum(arr, n - 1) + arr[n - 1];
+}
+```
+
+# [103.Profile Lookup](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/profile-lookup)
+
+```js
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  for (let i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
+      if (contacts[i].hasOwnProperty(prop)) {
+        return contacts[i][prop];
+      } else {
+        return "No such property";
+      }
+    }
+  }
+  return "No such contact";
+}
+
+lookUpProfile("Akira", "likes");
+```
+
+# [104.Generate Random Fractions with JavaScript](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/generate-random-fractions-with-javascript)
+
+```js
+function randomFraction() {
+  return Math.random();
+}
+```
+
+# [105.Generate Random Whole Numbers with JavaScript](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/generate-random-whole-numbers-with-javascript)
+
+```js
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+```
+
+# [106.Generate Random Whole Numbers within a Range](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/generate-random-whole-numbers-within-a-range)
+
+```js
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+```
+
+# [107.Use the parseInt Function](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-the-parseint-function)
+
+```js
+function convertToInteger(str) {
+  return parseInt(str);
+}
+convertToInteger("56");
+```
+
+# [108.Use the parseInt Function with a Radix](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-the-parseint-function-with-a-radix)
+
+```js
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+convertToInteger("10011");
+```
+
+# [109.Use the Conditional (Ternary) Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-the-conditional-ternary-operator)
+
+```js
+function checkEqual(a, b) {
+  return a === b ? "Equal" : "Not Equal";
+}
+checkEqual(1, 2);
+```
+
+# [110.Use Multiple Conditional (Ternary) Operators](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-multiple-conditional-ternary-operators)
+
+```js
+function checkSign(num) {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+checkSign(10);
+```
+
+# [111.Use Recursion to Create a Countdown](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-countdown)
+
+```js
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countdown(n - 1);
+    countArray.unshift(n);
+    return countArray;
+  }
+}
+```
+# [112.Use Recursion to Create a Range of Numbers](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-range-of-numbers)
+
+```js
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum === endNum) {
+    return [startNum];
+  } else {
+    const countArray = rangeOfNumbers(startNum, endNum - 1);
+    countArray.push(endNum);
+    return countArray;
+  }
+}
+```
+# [113.Compare Scopes of the var and let Keywords](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/compare-scopes-of-the-var-and-let-keywords)
+
+```js
+function checkScope() {
+  let i = 'function scope';
+  if (true) {
+    let i = 'block scope';
+    console.log('Block scope i is: ', i);
+  }
+  console.log('Function scope i is: ', i);
+  return i;
+}
+```
+# [114.Mutate an Array Declared with const](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/mutate-an-array-declared-with-const)
+
+```js
+const s = [5, 7, 2];
+[s[0], s[2]] = [s[2], s[0]];
+[s[1], s[2]] = [s[2], s[1]];
+console.log(s);
+```
+# [115.Prevent Object Mutation](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/prevent-object-mutation  )
+
+```js
+function freezeObj() {
+ const MATH_CONSTANTS = {
+  PI: 3.14
+};
+Object.freeze(MATH_CONSTANTS);
+MATH_CONSTANTS.PI = 3.14159;
+MATH_CONSTANTS.E = 2.71828;
+delete MATH_CONSTANTS.PI;
+console.log(MATH_CONSTANTS); 
+}
+const PI = freezeObj();
+```
+# [116.](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/prevent-object-mutation  )
+
+```js
+function freezeObj() {
+ const MATH_CONSTANTS = {
+  PI: 3.14
+};
+Object.freeze(MATH_CONSTANTS);
+MATH_CONSTANTS.PI = 3.14159;
+MATH_CONSTANTS.E = 2.71828;
+delete MATH_CONSTANTS.PI;
+console.log(MATH_CONSTANTS); 
+}
+const PI = freezeObj();
+
 ```
