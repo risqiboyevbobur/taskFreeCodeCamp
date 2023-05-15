@@ -1393,19 +1393,72 @@ console.log(MATH_CONSTANTS);
 }
 const PI = freezeObj();
 ```
-# [116.](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/prevent-object-mutation  )
-
+# [116.Prevent Object Mutation](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/prevent-object-mutation)
 ```js
 function freezeObj() {
- const MATH_CONSTANTS = {
-  PI: 3.14
-};
-Object.freeze(MATH_CONSTANTS);
-MATH_CONSTANTS.PI = 3.14159;
-MATH_CONSTANTS.E = 2.71828;
-delete MATH_CONSTANTS.PI;
-console.log(MATH_CONSTANTS); 
+  'use strict';
+  const MATH_CONSTANTS = {
+    PI: 3.14
+  };
+  Object.freeze(MATH_CONSTANTS);
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch(ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS.PI;
 }
 const PI = freezeObj();
-
+```
+# [117.Use Arrow Functions to Write Concise Anonymous Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-arrow-functions-to-write-concise-anonymous-functions)
+```js
+const magic = () => {
+  return new Date();
+};
+```
+# [118.Write Arrow Functions with Parameters](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/write-arrow-functions-with-parameters)
+```js
+const myConcat = (arr1, arr2) => {
+  return arr1.concat(arr2);
+};
+console.log(myConcat([1, 2], [3, 4, 5]));
+```
+# [119.Set Default Parameters for Your Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/set-default-parameters-for-your-functions)
+```js
+const increment = (number, value = 1) => number + value;
+```
+# [120.Use the Rest Parameter with Function Parameters](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-the-rest-parameter-with-function-parameters)
+```js
+const sum = (...args) => {
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+  return total;
+}
+```
+# [121.Use the Spread Operator to Evaluate Arrays In-Place](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-the-spread-operator-to-evaluate-arrays-in-place)
+```js
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+arr2 = [...arr1]; 
+console.log(arr2);
+```
+# [122.Use Destructuring Assignment to Extract Values from Objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-the-spread-operator-to-evaluate-arrays-in-place)
+```js
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+const { today, tomorrow } = HIGH_TEMPERATURES;
+```
+# [123.](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-the-spread-operator-to-evaluate-arrays-in-place)
+```js
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+const { today, tomorrow } = HIGH_TEMPERATURES;
 ```
